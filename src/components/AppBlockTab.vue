@@ -75,5 +75,9 @@ export default {
     border-right: none;
     border-radius: 10px 0 0 10px;
   }
+
+  &:hover &__input:not(:checked) ~ &__label {
+    border-color: #4ccc1f;
+  }
 }
 </style>

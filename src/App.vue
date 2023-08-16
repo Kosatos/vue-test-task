@@ -17,7 +17,14 @@
         <div
           class="main__block"
           :class="{ 'main__block_not-round': isFirstBlockActive }"
-        ></div>
+        >
+          <AppComplexList
+            v-show="tabs.find((tab) => tab.id === 'rc-list').isActive"
+          />
+          <AppAddComplexForm
+            v-show="tabs.find((tab) => tab.id === 'rc-add').isActive"
+          />
+        </div>
       </div>
     </div>
   </main>
@@ -26,12 +33,16 @@
 <script>
 import TheHeader from './components/TheHeader.vue'
 import AppBlockTab from './components/AppBlockTab.vue'
+import AppComplexList from './components/AppComplexList.vue'
+import AppAddComplexForm from './components/AppAddComplexForm.vue'
 
 export default {
   name: 'App',
   components: {
     TheHeader,
     AppBlockTab,
+    AppComplexList,
+    AppAddComplexForm,
   },
   data() {
     return {
@@ -78,7 +89,7 @@ export default {
   &__block {
     max-width: 898px;
     width: 100%;
-    height: calc(100vh - 100px);
+    // height: calc(100vh - 100px);
     background-color: #fff;
     border: 1px solid #621280;
     border-radius: 10px;

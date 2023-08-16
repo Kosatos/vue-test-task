@@ -11,6 +11,8 @@
       <div class="header__right">
         <TheAuthPreview />
       </div>
+
+      <TheLangSwitcher class="header__lang" />
     </div>
   </header>
 </template>
@@ -19,11 +21,13 @@
 import TheLogo from './TheLogo.vue'
 import TheHeaderSearch from './TheHeaderSearch.vue'
 import TheAuthPreview from './TheAuthPreview.vue'
+import TheLangSwitcher from './TheLangSwitcher.vue'
 export default {
   components: {
     TheLogo,
     TheHeaderSearch,
     TheAuthPreview,
+    TheLangSwitcher,
   },
 }
 </script>
@@ -52,6 +56,11 @@ export default {
     transform: translate(-50%, -50%);
     font-size: 15px;
     font-weight: 600;
+  }
+  &__lang {
+    position: absolute;
+    bottom: -100px;
+    left: 15px;
   }
 }
 </style>
