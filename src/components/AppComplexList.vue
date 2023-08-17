@@ -79,7 +79,7 @@ export default {
           district: 'Oba',
           period: '01/01/2022',
           manager: 'Robert Bocsh',
-          tel: '+7  916 555 44 33',
+          tel: '+7  916 555 42 33',
         },
         {
           name: 'GOLDCITY AURA 3',
