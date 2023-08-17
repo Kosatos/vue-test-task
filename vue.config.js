@@ -3,4 +3,5 @@ module.exports = defineConfig({
   transpileDependencies: true,
   publicPath:
     process.env.NODE_ENV === 'production' ? '/vue-test-task/dist/' : '/',
+  base: '/vue-test-task/dist/',
 })
